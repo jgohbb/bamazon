@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "",
+    password: "Aiglue2019",
     database: "bamazon_db"
 });
 
@@ -16,7 +16,7 @@ connection.connect(function(err) {
     // run the start function after the connection is made to prompt the user
     console.log("connected as id " + connection.threadId);
     console.log("WELCOME TO BAMAZON SHOPPING EXPERIENCE!");
-    console.log("- - - - - - - - - - - - - - - - - - - - - - - - - -");
+    console.log("---------------------------------------------------");
     startShop();
 });
 
@@ -106,12 +106,13 @@ function getOrder() {
                 connection.query("SELECT * FROM products WHERE ?", [{
                     item_id: inq.userItem
                 }], function (err, resOne) {
+                    
                     if (err) throw err;
+                    
                     if (resOne[0] != undefined) {
                         if (resOne[0].stock_quantity >= inq.userAmount) {
                             connection.query("UPDATE products SET stock_quantity = stock_quantity - ? WHERE ?",
-                                [
-                                    parseInt(inq.userAmount),
+                                [parseInt(inq.userAmount),
                                     {
                                         item_id: inq.userItem
                                     }
@@ -125,16 +126,21 @@ function getOrder() {
                                     if (inq.userAmount > 1) {
                                         console.log("");
                                         console.log(colors.brightGreen("Confirmed Orders: \n" + 
+                                        "--------------------------------------" + "\n" +
                                         "Item: " + resOne[0].product_name + "\n" +
                                         "Quantity: " + inq.userAmount + "\n" +
-                                        "Total Price (incl tax): " + roundedTotal + "\n"));
+                                        "Total Price (incl tax): $" + roundedTotal + "\n" +
+                                        "--------------------------------------"));
                                         console.log("");
+                                        
                                     } else {
                                         console.log("");
                                         console.log(colors.brightGreen("Confirmed Orders: \n" + 
+                                        "--------------------------------------" + "\n" +
                                         "Item: " + resOne[0].product_name + "\n" +
                                         "Quantity: " + inq.userAmount + "\n" +
-                                        "Total Price (incl tax): " + roundedTotal + "\n"));
+                                        "Total Price (incl tax): $" + roundedTotal + "\n" +
+                                        "--------------------------------------"));
                                         console.log("");
                                     }
                                     shopAgain();
@@ -148,7 +154,7 @@ function getOrder() {
                         }
                     } else {
                         console.log("");
-                        console.log(colors.brightRed("Sorry item is not in our database. Please try another item ID from the table."));
+                        console.log(colors.brightRed("Sorry item is not available in our database. Please try another item ID from the table."));
                         console.log("");
                         startShop();
                     };
