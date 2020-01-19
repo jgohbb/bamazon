@@ -32,6 +32,7 @@ Upon exiting the app at any time, the customer will be alerted with a message.
 
 ![connect](images/6-exit.png)
 
-
+Note: this work has been added to my portfolio page in my bio.
+[myportolio](https://jgohbb.github.io/Portfolio-JGoh/portfolio.html)
 
 
