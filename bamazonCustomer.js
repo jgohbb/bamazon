@@ -2,6 +2,7 @@ var mysql = require("mysql");
 var inquirer = require("inquirer");
 var colors = require('colors');
 var cTable = require("console.table");
+var passKey = require("./keys.js");
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -13,7 +14,6 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
     if (err) throw err;
-    // run the start function after the connection is made to prompt the user
     console.log("connected as id " + connection.threadId);
     console.log("WELCOME TO BAMAZON SHOPPING EXPERIENCE!");
     console.log("---------------------------------------------------");
