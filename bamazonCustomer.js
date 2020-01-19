@@ -100,7 +100,7 @@ function getOrder() {
             }, {
                 name: "userAmount",
                 type: "input",
-                message: "Please enter the amount of product you would like to purchase. All prices shown in USD (taxes not included)."
+                message: "Please enter the quantity."
             }]).
                 then(function (inq) {
                 connection.query("SELECT * FROM products WHERE ?", [{
