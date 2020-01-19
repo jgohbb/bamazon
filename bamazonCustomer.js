@@ -7,7 +7,7 @@ var connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",
-    password: "Aiglue2019",
+    password: "",
     database: "bamazon_db"
 });
 
@@ -132,7 +132,7 @@ function getOrder() {
                                         "Total Price (incl tax): $" + roundedTotal + "\n" +
                                         "--------------------------------------"));
                                         console.log("");
-                                        
+
                                     } else {
                                         console.log("");
                                         console.log(colors.brightGreen("Confirmed Orders: \n" + 
