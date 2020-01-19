@@ -96,11 +96,11 @@ function getOrder() {
             prompt([{
                 name: "userItem",
                 type: "input",
-                message: "Please enter unique Item ID for your order."
+                message: "Please enter unique Item ID for your order: "
             }, {
                 name: "userAmount",
                 type: "input",
-                message: "Please enter the quantity."
+                message: "Please enter the quantity: "
             }]).
                 then(function (inq) {
                 connection.query("SELECT * FROM products WHERE ?", [{
