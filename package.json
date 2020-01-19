@@ -1,0 +1,26 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "storefront CLI App",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgohbb/bamazon.git"
+  },
+  "author": "jgoh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgohbb/bamazon/issues"
+  },
+  "homepage": "https://github.com/jgohbb/bamazon#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "console.table": "^0.10.0",
+    "inquirer": "^7.0.3",
+    "mysql": "^2.17.1",
+    "node": "^13.6.0"
+  }
+}
