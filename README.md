@@ -10,6 +10,6 @@ This app uses the command line in Node.js CLI to generate a response from the fu
 ## Instructions
 The user will be able to search for upcoming concerts by artist or band via Bands In Town api. This will provide concerts venue, location and date.
 
-![connect](./images/connectingPage.png)
+![connect](images/1-connectingPage.png)
 
 
