@@ -1,5 +1,5 @@
 # BAMAZON
-A storefront CLI app using MySQL to take orders from customers and deplete stock from the store's inventory. It will generate pricing information and keep track of stocks for inventory management.
+A storefront CLI app using Node/MySQL to take orders from customers and deplete stock from the store's inventory. It will generate pricing information and keep track of stocks for inventory management.
 
 ## Overview
 This app uses the command line in Node.js CLI to generate a response from the functions in the application. To retrieve the data that will power this app, users will require:
@@ -8,7 +8,7 @@ This app uses the command line in Node.js CLI to generate a response from the fu
 - Customer need a MySql password in bamazonCustomer.js (for this particular exercise). 
 
 ## Instructions
-The customer will enter the app via the node command line which will prompt for a on option to see what is available.  
+The customer will enter the app via the node command line which will prompt for an option to see what is available.  
 
 ![connect](images/1-connectingPage.png)
 
