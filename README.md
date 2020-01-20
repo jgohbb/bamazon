@@ -12,7 +12,7 @@ The customer will enter the app via the node command line which will prompt for 
 
 ![connect](images/1-connectingPage.png)
 
-This will provide the customer with a snapshot of what is available for sale. The table incude a unique item ID, product, unit price and available stocks. Customer will then be prompted to either place an order or if nothing is interesting leave the app.  
+On selecting the 'View Inventory" option, the customer will be provided with a snapshot of what is available for sale. The table incude a unique item ID, product, unit price and available stocks. Customer will then be prompted to either place an order or if nothing is interesting leave the app.  
 
 ![inventory](images/2-ViewInventory.png)
 
